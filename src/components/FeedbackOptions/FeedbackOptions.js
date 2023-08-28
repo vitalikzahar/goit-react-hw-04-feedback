@@ -1,21 +1,14 @@
 import { Buttons } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({
+  options,
   goodFeadbacks,
   neutralFeadbacks,
   badFeadbacks,
+  feedback,
 }) => {
   return (
     <Buttons>
-      <button key={'good'} onClick={goodFeadbacks}>
-        {'good'}
-      </button>
-      <button key={'neutral'} onClick={neutralFeadbacks}>
-        {'neutral'}
-      </button>
-      <button key={'bad'} onClick={badFeadbacks}>
-        {'bad'}
-      </button>
-      {/* {options.map(option => (
+      {options.map(option => (
         <button
           key={option}
           onClick={() => {
@@ -24,7 +17,7 @@ export const FeedbackOptions = ({
         >
           {option}
         </button>
-      ))} */}
+      ))}
     </Buttons>
   );
 };
